@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p,
+        header,
+        main,
+        nav,
+        section,
+        aside,
+        footer {
+            border: 1px solid red;
+        }
+
+        .flexcontainer1 {
+            display: flex;
+            flex-direction: column;
+            /*выстраивает flex-элементы вертикально друг под другом*/
+        }
+
+        .flexcontainer2 {
+            display: flex;
+            flex-direction: row;
+            /*если не указывать это свойство, оно будет таким по умолчанию (flex-элементы будут в один ряд и прилипшими др к др*/
+            flex-wrap: wrap;
+            /*используем для того, чтобы произошел перенос контейнеров когда они не влезают на экран по ширине*/
+            align-items: stretch;
+            /*растянет на высоту всего блока*/
+            /*flex-start расположит вверху, flex-end-внизу, center-по центру*/
+            border: 1px solid blue;
+            height: 100px;
+        }
+
+        .flexp_s {
+            align-self: flex-end;
+            /*делает другой стиль для определенного элемента*/
+            flex-grow: 1;
+        }
+
+        .flexcontainer3 {
+            border: 1px solid blue;
+            flex-direction: row;
+            display: flex;
+            flex-wrap: wrap;
+            height: 30vh;
+            align-content: space-around;
+            /*flex-start, flex-end, center, space-between, space-around: располагает элементы по высоте*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flexbox</h1>
+    <diV class="flexcontainer1">
+        <p>Абзац 1</p>
+        <p>Абзац 2</p>
+        <p>Абзац 3</p>
+    </diV>
+
+    <h1>Flexbox2</h1>
+    <diV class="flexcontainer2">
+        <p class="flexp"> Абзац 1 </p>
+        <p class="flexp_s">Абзац 2 </p>
+        <p class="flexp">Абзац 3 </p>
+        <p class="flexp">Абзац 4 </p>
+    </diV>
+
+    <h1>Flexbox3</h1>
+    <diV class="flexcontainer3">
+        <p>АААААААААААААААААААААААААААААААААААААААААААА </p>
+        <p class="flexp">ББББББББББББББББББББББББББББББББББББББББББББ </p>
+        <p class="flexp">Абзац 3 </p>
+        <p class="flexp">Абзац 4 </p>
+    </diV>
+</body>
+
+</html>

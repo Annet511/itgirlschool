@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.displayblock {
+            border: 1px solid red;
+            display: block;
+            /*добавили display: block его и ничего не изменилось*/
+            width: 150px;
+            height: 26px;
+            padding: 10px;
+            /*чтобы они красиво отступали друг от друга*/
+        }
+
+        p.displayinline {
+            border: 1px solid red;
+            display: inline;
+            /*для строчных элементов важен размер внутри (текст, картинка), остальные размеры никак не влияют*/
+            /*убрали width и height так как они при display: inline не работают*/
+            padding: 10px;
+            /*чтобы они красиво отступали друг от краев блока*/
+            margin: 10px;
+            /*чтобы они красиво отступали друг от друга*/
+        }
+
+        p.displayinlineblock {
+            border: 1px solid red;
+            display: inline-block;
+            box-sizing: border-box;
+            /*вернем width и height так как они при display: inline-block будут снова работать*/
+            width: 150px;
+            padding: 10px;
+            /*чтобы они красиво отступали друг от друга*/
+            margin: 10px;
+        }
+    </style>
+</head>
+<!--при блочной модели мы не можем точно знать какие в итоге получаться размеры блоков
+можем, но это сложно и неудобно-->
+
+<body>
+    <h1>Блочная модель 1</h1>
+    <p class="displayblock">абзац 1</p>
+    <p class="displayblock">абзац 2</p>
+    <p class="displayblock">абзац 3</p>
+    <h2>Блочная моддель 2</h2>
+    <p class="displayinline">абзац 1</p>
+    <p class="displayinline">абзац 2</p>
+    <p class="displayinline">абзац 3</p>
+    <h2>Блочная моддель 3</h2>
+    <p class="displayinlineblock">абзац 1</p>
+    <p class="displayinlineblock">абзац 2</p>
+    <p class="displayinlineblock">абзац 3</p>
+
+
+
+</body>
+
+</html>
