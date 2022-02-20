@@ -6,10 +6,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            border: 1px solid black;
+            max-height: 100%;
+        }
+
+        header {
+            background-color: rgb(231, 222, 222);
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            border: 1px solid black;
+            align-items: center;
+            max-height: 100vh;
+        }
+
+        main {
+            background-color: rgb(245, 245, 142);
+            height: 70vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-content: center;
+            border: 1px solid black;
+        }
+
+
+
+        aside {
+            background-color: rgb(112, 151, 112);
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+        }
+
+        footer {
+            background-color: rgb(231, 222, 222);
+            height: 15vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid black;
+            bottom: 0px;
+            margin-bottom: 0px;
+
+        }
+
+
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-between;
+            border: 1px solid black;
+            padding: 10 px;
+            margin: 100px;
+
+        }
+
+        .row1 {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            border: 1px solid black;
+            padding: 30 px;
+            margin: 50px;
+        }
+
+        .row1-g {
+            display: flex;
+            flex-grow: 2;
+        }
+
+        #aside {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            width: 25vw;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
+    <header class="container">Шапка страницы
+    </header>
+    <main class="container">Основная часть
+        <div class="row">
+            <arcticle class="col col__arcticle">
+                <div class="row1">
+                    <article>Еще 1</article>
+                </div>
+                <div class="row1">
+                    <article>Еще 2</article>
+                </div>
+                <div class="row1-g">
+                    <article>Еще 3</article>
+                </div>
+        </div>
+        </arcticle>
+        <aside id="aside">Боковая область
+        </aside>
+        </div>
+    </main>
 
+
+    <footer class="flex-container">
+        <section>Секция футера 1</section>
+        <section>Секция футера 2</section>
+        <section>Секция футера 3</section>
+        <section>Секция футера 4</section>
+    </footer>
 </body>
 
 </html>
