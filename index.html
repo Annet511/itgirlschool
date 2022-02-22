@@ -9,8 +9,7 @@
 
     <style>
         body {
-            border: 1px solid black;
-            max-height: 100%;
+            max-height: 100vh;
         }
 
         header {
@@ -18,7 +17,6 @@
             height: 15vh;
             display: flex;
             justify-content: center;
-            border: 1px solid black;
             align-items: center;
         }
 
@@ -27,39 +25,47 @@
             background-color: rgb(245, 245, 142);
             height: 70vh;
             display: flex;
-            border: 1px solid black;
+            justify-content: space-between;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .main-text {
+            flex-grow: 1;
+            text-align: center;
         }
 
         .row {
             display: flex;
+            flex-grow: 2;
             justify-content: space-between;
-            align-items: flex-end;
+            /*align-items: flex-end; не необходимости в нем*/
             flex-wrap: wrap;
         }
 
         .item {
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-            justify-content: center;
-            border: 1px solid black;
-            flex-wrap: wrap;
-            margin: 30px;
-            width: 300px;
-            height: 50px;
+            background-color: rgb(153, 153, 38);
+            flex-grow: 1;
+            margin: 15px;
+            text-align: center;
         }
 
         #item-three {
-            flex-grow: 1;
+            flex-basis: 100%;
         }
 
         .aside {
             background-color: rgb(112, 151, 112);
             display: flex;
-            border: 1px solid black;
             justify-content: center;
             align-items: center;
             width: 20vw;
+
         }
 
         footer {
@@ -68,10 +74,15 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            border: 1px solid black;
             bottom: 0px;
             margin-bottom: 0px;
             padding: 15px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
         }
     </style>
 </head>
@@ -81,15 +92,15 @@
     </header>
     <main>
         <div class="container">
+            <div class="main-content">
+                <p class="main-text">Основная часть</p>
 
-            <p>Основная часть</p>
-
-            <div class="row">
-                <div class="item">Еще 1</div>
-                <div class="item">Еще 2</div>
-                <div class="item" id="item-three">Еще 3</div>
+                <div class="row">
+                    <div class="item">Еще 1</div>
+                    <div class="item">Еще 2</div>
+                    <div class="item" id="item-three">Еще 3</div>
+                </div>
             </div>
-
             <aside class="aside">
                 <p>Боковая область</p>
             </aside>
@@ -98,10 +109,12 @@
 
 
     <footer class="flex-container">
-        <section>Секция футера 1</section>
-        <section>Секция футера 2</section>
-        <section>Секция футера 3</section>
-        <section>Секция футера 4</section>
+        <div class="footer">
+            <section>Секция футера 1</section>
+            <section>Секция футера 2</section>
+            <section>Секция футера 3</section>
+            <section>Секция футера 4</section>
+        </div>
     </footer>
 </body>
 
